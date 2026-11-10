@@ -1,0 +1,31 @@
+﻿# Runtime state and credentials
+reasoning_engine/config.yaml
+**/config.yaml
+reasoning_engine/data/*.json
+reasoning_engine/data/*.log
+reasoning_engine/reasoning_engine/data/*.json
+reasoning_engine/reasoning_engine/data/*.log
+reasoning_engine/results/*
+!reasoning_engine/results/.gitkeep
+
+# Python environments and generated files
+.venv/
+venv/
+env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Frontend dependencies and generated output
+reasoning_engine/gui/node_modules/
+reasoning_engine/gui/.next/
+reasoning_engine/gui/out/
+reasoning_engine/gui/coverage/
+*.tsbuildinfo
+
+# Local secrets and OS files
+.env
+.env.*
+*.pem
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+#!/bin/bash
+# REDOPS - Universal Command Wrapper
+# This script ensures the correct virtual environment is used globally.
+
+SCRIPT_PATH=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+
+# Use the absolute path to the project's venv python
+VENV_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+
+if [ -f "$VENV_PYTHON" ]; then
+    "$VENV_PYTHON" "$SCRIPT_DIR/pt.py" "$@"
+else
+    # Fallback to system python if venv isn't set up yet
+    python3 "$SCRIPT_DIR/pt.py" "$@"
+fi
